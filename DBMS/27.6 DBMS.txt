@@ -1,0 +1,38 @@
+27.6 DBMS
+what is a data ?
+Data is a collection of raw facts and figures
+data is a input
+
+What is information?
+Information is valuable data.
+Information is a processed data.
+information is a meaningful data.
+Information is summarised data.
+
+Processes is the ability of computation , summarisation , Reporting
+
+
+What's database ?
+Collection of logically related data
+
+what's DBMS?
+database management system
+its used for creating manipulating to storing to retrieving data
+
+Application of DBMS 
+DBMS is a computerised record-keeping system.
+DBMS is required where ever data need to store.
+   sectors required DBMS
+E - commerce 
+online TV streaming
+Social media
+banking nd insurance
+airline & railway
+Universities collages and schools
+library management system
+human resource department
+
+
+Advantages of DBMS
+Reduce data redundancy (duplication)
+Remove data Inconsistency

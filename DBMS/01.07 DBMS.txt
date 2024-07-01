@@ -1,0 +1,56 @@
+DATA ABSTRACTION IN DBMS
+*database system is made-up of complex data structures. (Algorithms)
+*to ease the user interaction with data base, the developers hide internal irrelevant details from users.
+*This process of hiding irrelevant details (complexity) from user is called data abstraction.
+
+TYPES OF DATA INDEPENDENCE
+*physical data independence
+--physical independence is ability to modify the physical schema without requiring any change in logical (Conceptual) schema and application programs.
+
+*Logical data independence 
+-- Logical data independence is ability to modify the conceptual schema without requiring any change in application programs.
+
+TYPES OF DATABASE USERS
+*Naive users (End users)
+--Unsophisticated users who have zero knowledge of database system
+
+*Application programmers 
+--people who develop software using tools such as JAVA .net PHP etc.
+
+*sophisticated Users
+--Interact with database systems without using any application. they use query tools like SQL
+
+*Specialised users (DBA)
+--user write specialized database applications program
+--he controls the Entire Database
+
+Schema - is a database for user
+
+ROLES OF DBA
+*schema definition
+--DBA defines logical schema of the database.eg creating database tables indexes etc
+--altering the database
+
+*Storage structure and access method definition
+--DBA decides how the data is to be represented in database & how to access it.
+
+*Defining security and integrity constraints
+--DBA decides on various security and integrity constraints.
+
+*Granting of Authorisation for Data access
+--DBA determines which user needs access to which part of the database.
+*Liaison with users
+--DBA provide necessary data to the user.
+
+*assisting application programmer
+--DBA provides assistance to application programmers to develop application programs
+
+*Monitoring Performance 
+--DBA ensures that better performance in maintained by making change in the physical and logical schema
+
+*Backup and recovery
+--Backing up the database and recovery the systems in case of failures.
+
+
+
+DATA BASE ARCITECTURE

@@ -1,0 +1,66 @@
+28.7 DBMS
+Advantages of DBMS (duplication)
+
+*reduce data redundancy - avoids unnecessary duplication of data centrally
+
+*remove data inconsistency - by elimination redundancy data inconsistency will be removed 
+
+*data isolation
+
+*Guaranteed atomicity
+
+*Allow implementing integrity Constrains 
+Integrity is a correctness and accuracy of data
+
+*Shares data among multiple users
+
+*Restricting unauthorised access to data
+
+*Providing backup and recovery service
+
+
+
+
+What is Transaction?
+Transaction - A transaction is a unit of process (A single task)
+
+
+
+BASIC TERMS (CONT.. )
+*Metadata - it's data about data
+data such as table name, column name, data type, Authorised user and user access privileges for any table is called meta data for that table.
+
+*Data dictionary (Data catalogue)
+Metadata is stored in a data dictionary
+
+*Data warehouse
+Data warehouse is used for storing historical data for the purpose forecasting and analyzing
+
+*Field
+A field is a character group of characters that have a specific meaning.
+
+
+3 LEVELS ANSI SPARC DATABASE SYSTEM
+*view level(Physical level) - how data are viewed by each users ?
+it describes how data is stored on a storage device.
+Deals with physical storage of data
+internal view is described by the internal schema
+
+
+*Logical level (conceptual level) - What data stored and what relationship exists ?
+it hides low level complicities of physical storage
+for eg Student database may contain student and course tables which will be visible to users but users are unaware about heir storage.
+data base administrator works at his level to determine what data to keep in the data base.
+
+
+
+*Physical level (view level) - How data are actually stored on storage devices?
+it describes only part of the entire database that an end user concern or how data are viewed by each user 
+End users need to access only part of the database rather than the entire database
+
+
+
+
+
+
+
