@@ -1,0 +1,65 @@
+DATA BASE ARCITECTURE
+
+structure of DBMS
+*query processor
+--The query processor receives the queries (requests) from the user and interprets them in form of instructions.
+
+*DML compiler
+--It converts the DML (Data manipulation Language) instructions into machine language (low level language)
+adding records , updating , deleting records.
+
+*DDL interpreter
+--It interprets the DDL (data definition language) instructions and stores the record in a data dictionary (in a table containing meta-data)
+--eg create table , view , indexes and other objects.
+--ordering table , view , indexes and other object structures.
+
+*Query optimiser
+--It executes the DML instructions and picks the lowest cost evaluation plan out of all the alternatives present.
+
+*Storage manager
+--Storage manager acts as the interface between the data stored in the database and the queries received from the end-user.
+a) Authorisation and Integrity manager : It checks the author of various users who access data and the integrity constrains of the database.
+b) Transaction manager : its job is to assure to the system remains in proper state during the transaction process .
+
+
+CONCURRANCY
+simultaneously 
+
+What is DATABASE ?
+A database is collection of data files , indexes ,compiled DMLs and data dictionary.
+
+What is Model?
+A Model is a blueprint. it resembles the real world entity
+
+Database Models
+*Hierarchical databases -
+--Represents data as hierarchical tree
+--very efficient model in case of searching.
+-- but had issues when a data element is associated with more than one group.
+--Records for parent-child Relationships
+
+*Network Model 
+--this overcomes hierarchical model issue
+--this represents data as record types
+--each record has a link field corresponding to every relationship which it participates (circular linked list)
+--It's a general and powerful ssf\model 
+--but still it had system complexity and very less structural data independence
+--records have multiple parent.
+
+*Relational model - by Dr. EF Codd.
+--Network model is replaced with relational model 
+--Represents data as record types in table format.
+--Relationship between records are maintained using logical data.
+--Eliminates Parent child relationships , tables are used
+
+What's relation ?
+when the attributes have a single UID for tuples.
+when a table has a primary key column which uniquely identifies a record in a table is known as relation.
+
+
+
+
+
+
+
+

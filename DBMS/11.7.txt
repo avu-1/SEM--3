@@ -1,0 +1,13 @@
+1.	First Normal Form (1NF) :-
+Each column in a table must hold atomic (indivisible) values.
+Each column should contain values of the same data type.
+Each row should be uniquely identifiable, typically through a primary key.
+a)	Un-Normalized : sales
+b)	1NF: sales
+
+1.	First Normal Form (1NF) :-
+Each column in a table must hold atomic (indivisible) values.
+Each column should contain values of the same data type.
+Each row should be uniquely identifiable, typically through a primary key.
+a)	Un-Normalized : sales ( date, order_no, product_no, product_description, price, quantity_sold, cust_name, cust_address)
+b)	1NF: sales (date, order_no, product_no, product_description, price, quantity_sold, cust_street, cust_city, cust_state, cust_zip)
