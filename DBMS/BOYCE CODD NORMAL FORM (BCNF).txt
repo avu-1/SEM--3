@@ -1,0 +1,29 @@
+BOYCE CODD NORMAL FORM (BCNF)
+What is BCF in DBMS?
+BCNF ( boyce codd normal form) is a an advanced version of the third normal form (3NF) , and often it is also known as the 3.5 Normal Form. 3NF doesn’t remove 100% redundancy in the cases where for a functional dependency (say A -> B), A is not the candidate key of the table. To deal with such situations, BCNF was introduced.
+Relation R with three columns: Id, Subject and Professor. We have to find the highest normalization form, and also, if it is not in BCNF, we have to decompose it to satisfy the condition of BCNF.
+ID                                    Subject                                   Professor
+101                                Java                                          MAYANK
+101                                 c++                                          KARTIK
+102                                Java                                          HITESH
+103                                c#                                            SARTHAK
+104                                Java                                         DHRUV
+
+NOTE:
+Each professor teaches only one subject,  but one subject may be taught by multiple professors.
+Subject is always dependent on the professor ( professor -> subject ).
+Professor column is a non – prime attribute, while the subject is a prime attribute. This is not allowed in BCNF in DBMS.
+We will decompose the table into two tabled: the Student Table and the Professor table to satisfy the conditions of BCNF
+S_ID	PROFESSOR
+101	MAYANK
+101	KARTIK
+101	HITESH
+102	SARTHAK
+103	DHRUV
+Professor table:-
+professor	Subject
+Mayank	Java
+Kartik	C++
+Hitesh	Java
+sarthak	C#
+Professor is now the primary key and the prime attribute column, deriving the subject column. Hence , it is in BCNF.

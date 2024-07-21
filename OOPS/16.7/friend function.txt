@@ -1,0 +1,7 @@
+function is defined as a friend function in C++ , then the protected and private dataoff a class can be accessed using the function.
+Syntax:
+friend data_type function_name (arguements/s)
+
+-The decleration of a friend function should be done 
+-a friend function can be granted special access to private and protected members of a class in C++
+-they aren't member functions

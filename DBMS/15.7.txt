@@ -1,0 +1,5 @@
+*Oracle lingo , A database is a set of files (data files , redo log files , control files , data dictionary and so on)
+
+*A schema is collection of database objects, including logical structures such as tables, views, sequences, stored procedures, synonyms, indexes, clusters and database links etc.
+a user owns schema
+a user and a schema have same name
