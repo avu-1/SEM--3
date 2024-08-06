@@ -24,6 +24,6 @@ Professor table:-
 professor	Subject
 Mayank	Java
 Kartik	C++
-Hitesh	Java
+Hi ctesh	Java
 sarthak	C#
 Professor is now the primary key and the prime attribute column, deriving the subject column. Hence , it is in BCNF.
