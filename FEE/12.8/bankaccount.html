@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #f4f4f4;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+            text-align: left;
+        }
+
+        .form-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 48%;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-container button:hover {
+            background-color: #218838;
+        }
+
+        #accountInfo {
+            margin-top: 25px;
+            padding: 20px;
+            background: #e9ecef;
+            border-radius: 5px;
+            color: #333;
+            font-size: 14px;
+            text-align: left;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Bank Account Management</h2>
+
+    <div class="form-group">
+        <label for="name">Account Holder Name:</label>
+        <input type="text" id="name">
+    </div>
+
+    <div class="form-group">
+        <label for="accountNumber">Account Number:</label>
+        <input type="text" id="accountNumber">
+    </div>
+
+    <div class="form-group">
+        <label for="initialBalance">Initial Balance:</label>
+        <input type="number" id="initialBalance">
+    </div>
+
+    <div class="form-group">
+        <label for="depositAmount">Deposit Amount:</label>
+        <input type="number" id="depositAmount">
+    </div>
+
+    <div class="form-group">
+        <label for="withdrawAmount">Withdraw Amount:</label>
+        <input type="number" id="withdrawAmount">
+    </div>
+
+    <div class="button-container">
+        <button onclick="createAccount()">Create Account</button>
+        <button onclick="showBalance()">Show Balance</button>
+    </div>
+
+    <div class="button-container">
+        <button onclick="depositMoney()">Deposit Money</button>
+        <button onclick="withdrawMoney()">Withdraw Money</button>
+    </div>
+
+    <div id="accountInfo"></div>
+</div>
+
+<script>
+    class BankDetails {
+        constructor(accountNumber, accountHolder, initialBalance) {
+            this.accountNumber = accountNumber;
+            this.accountHolder = accountHolder;
+            this.accountBalance = initialBalance;
+        }
+
+        withdraw(amount) {
+            if (amount > this.accountBalance) {
+                alert('Insufficient Balance!');
+            } else {
+                this.accountBalance -= amount;
+                alert(`You have withdrawn $${amount.toFixed(2)}. Your new balance is $${this.accountBalance.toFixed(2)}.`);
+            }
+        }
+
+        deposit(amount) {
+            this.accountBalance += amount;
+            alert(`You have deposited $${amount.toFixed(2)}. Your new balance is $${this.accountBalance.toFixed(2)}.`);
+        }
+
+        displayBalance() {
+            alert(`Account Balance: $${this.accountBalance.toFixed(2)}`);
+        }
+
+        displayDetails() {
+            const accountInfo = `
+                <strong>Account Number:</strong> ${this.accountNumber}<br>
+                <strong>Account Holder:</strong> ${this.accountHolder}<br>
+                <strong>Account Balance:</strong> $${this.accountBalance.toFixed(2)}
+            `;
+            document.getElementById("accountInfo").innerHTML = accountInfo;
+            document.getElementById("accountInfo").style.display = 'block';
+        }
+    }
+
+    let object1;
+
+    function createAccount() {
+        const name = document.getElementById("name").value;
+        const accountNumber = document.getElementById("accountNumber").value;
+        const initialBalance = parseFloat(document.getElementById("initialBalance").value);
+
+        object1 = new BankDetails(accountNumber, name, initialBalance);
+        object1.displayDetails();
+    }
+
+    function depositMoney() {
+        const depositAmount = parseFloat(document.getElementById("depositAmount").value);
+        object1.deposit(depositAmount);
+        object1.displayDetails();
+    }
+
+    function withdrawMoney() {
+        const withdrawAmount = parseFloat(document.getElementById("withdrawAmount").value);
+        object1.withdraw(withdrawAmount);
+        object1.displayDetails();
+    }
+
+    function showBalance() {
+        object1.displayBalance();
+    }
+</script>
+
+</body>
+</html>
